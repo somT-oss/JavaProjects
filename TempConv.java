@@ -2,14 +2,19 @@ import java.util.Scanner;
 
 public class TempConv {
     public static void main(String[] args) {
+
+        // Method that does the actual temprature conversion
         String converter = converter();
         System.out.println(converter);
     }
  
     public static String converter() {
-        
+
+        // Colects user input
         Scanner scanner = new Scanner(System.in);
         System.out.println("Note that all default temperature entry will be in Celcius.");
+        
+        // Shpws the available options for temprature conversion
         System.out.println("Available options: Farenheit to Celsius, Celsius to Farenheit, Kelvin to Farenheit, Kelvin to Celsius");
 
 
@@ -20,6 +25,7 @@ public class TempConv {
         int userInputNumber = scanner.nextInt();
 
 
+        // Cases that return the respective temprature conversion
         switch (userInput) {
             case "Farenheit to Celsius":
                 int resultFarenheit = (9/5 * userInputNumber) + 32;
